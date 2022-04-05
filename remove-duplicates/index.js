@@ -41,3 +41,10 @@ console.log(
     "3": ["A", "B", "D"],
   })
 );
+//   {
+//     "1": ["F", "G"],
+//     "2": ["C"],
+//     "3": ["A", "B", "D"]
+//   }
+
+module.exports = removeDuplicates;
