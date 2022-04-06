@@ -36,3 +36,14 @@ describe("Morse spec", () => {
 
     expect(morseToText("..- .-... ..")).toBe("U&I");
   });
+
+  test("it decodes letters with multiple spaces", () => {
+    expect(morseToText(" . ")).toBe("E");
+    expect(morseToText("   .   . ")).toBe("E E");
+    expect(
+      morseToText(
+        "      ...---... -.-.--   - .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-     "
+      )
+    ).toBe("SOS! THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.");
+  });
+});
