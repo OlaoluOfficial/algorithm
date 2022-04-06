@@ -10,3 +10,19 @@ describe("Morse assumptions", () => {
     expect(() => morseToText([])).toThrowError("Please provide a morse string");
   });
 });
+
+describe("Morse spec", () => {
+  test("it decodes single letters and words", () => {
+    expect(morseToText(".-")).toBe("A");
+    expect(morseToText(".")).toBe("E");
+    expect(morseToText("..")).toBe("I");
+    expect(morseToText("...---...")).toBe("SOS");
+  });
+
+  test("it decodes letters with spaces", () => {
+    expect(morseToText(". .")).toBe("EE");
+    expect(morseToText(".   .")).toBe("E E");
+    expect(morseToText("... --- ...")).toBe("SOS");
+    expect(morseToText("...   ---   ...")).toBe("S O S");
+    expect(morseToText("-.. . -.-. .-   -.. . ...-")).toBe("DECA DEV");
+  });
