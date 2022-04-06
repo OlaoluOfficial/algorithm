@@ -26,3 +26,13 @@ describe("Morse spec", () => {
     expect(morseToText("...   ---   ...")).toBe("S O S");
     expect(morseToText("-.. . -.-. .-   -.. . ...-")).toBe("DECA DEV");
   });
+
+  test("It decodes special characters", () => {
+    expect(
+      morseToText(
+        "...-..- ..... .-.-.- ----- --...   .--. . .-.    -... --- - - .-.. ."
+      )
+    ).toBe("$5.07 PER BOTTLE");
+
+    expect(morseToText("..- .-... ..")).toBe("U&I");
+  });
