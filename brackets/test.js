@@ -41,3 +41,12 @@ describe("Brackets Suite", () => {
     expect(isValid("[{}]({}){[[[}]]]")).toBe("invalid");
     expect(isValid("{{{{{{{{{{{{}}}}}}}}}}}()[}]")).toBe("invalid");
   });
+
+  test("Complex chracters - valid", () => {
+    expect(isValid("{[()[]]()}()")).toBe("valid");
+    expect(isValid("{{{(())}}[[()]]}")).toBe("valid");
+    expect(isValid("[{()}({[]})(){}[]]")).toBe("valid");
+    expect(isValid("(){}[](([][]){})")).toBe("valid");
+    expect(isValid("{{[][()]}{[][()]}{[][()]}}")).toBe("valid");
+  });
+});
