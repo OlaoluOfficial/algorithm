@@ -26,3 +26,12 @@ describe("Find Duplicates", () => {
       1,
     ]);
   });
+
+  test("non serial strings", () => {
+    expect(isolateDuplicates("boopdedoop")).toEqual(["boopdedoop", 0]);
+    expect(isolateDuplicates("helloookat")).toEqual(["helloo[o]kat", 1]);
+    expect(isolateDuplicates("hellllloooooodeeeecadevvsss")).toEqual([
+      "hell[lll]oo[oooo]dee[ee]cadevvss[s]",
+      4,
+    ]);
+  });
