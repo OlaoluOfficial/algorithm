@@ -28,3 +28,16 @@ describe("Brackets Suite", () => {
     expect(isValid("{{{{{{{{{{{{{}}}}}}}}}}}}}")).toBe("valid");
     expect(isValid("{}{{}}{{{}}}{{{{}}}}{}{}{}")).toBe("valid");
   });
+
+  test("Complex characters - invalid", () => {
+    expect(isValid("({()}[()]}")).toBe("invalid");
+    expect(isValid("[](){{{}}")).toBe("invalid");
+    expect(isValid("{{{{{{{{{{{{}}}}}}}}}}}()[]")).toBe("invalid");
+    expect(isValid("}{{{{}}}}{([])(((()))){")).toBe("invalid");
+  });
+
+  test("invalid closes", () => {
+    expect(isValid("(([))]")).toBe("invalid");
+    expect(isValid("[{}]({}){[[[}]]]")).toBe("invalid");
+    expect(isValid("{{{{{{{{{{{{}}}}}}}}}}}()[}]")).toBe("invalid");
+  });
