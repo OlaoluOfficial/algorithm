@@ -6,6 +6,7 @@ const solution = (A) => {
     A.sort((a,b) => a - b)
     A[A.length - 1] = A[A.length - 1] / 2;
     newPollution = A.reduce((prev,curr) => prev + curr, 0)
+    filters++
   }
+  return filters
 }
-console.log(solution([5,19,8,1]));
