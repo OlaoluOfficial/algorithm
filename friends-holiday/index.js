@@ -14,9 +14,9 @@ function solution(P,S) {
     console.log(P[i])
     if (P[i] <= remainingSeats){
       count--
-      count
+      // count
       remainingSeats -= P[i]
-      remainingSeats
+      // remainingSeats
     } else {
       return count;
     }
