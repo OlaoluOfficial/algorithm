@@ -3,7 +3,7 @@ function solution(P,S) {
   let arr = [];
   for (let i = 0; i < P.length; i++) {
     arr[i] = S[i] - P[i];
-    arr
+    // arr
   }
 
   let remainingSeats = arr.reduce((prev, curr) => prev + curr, 0)
