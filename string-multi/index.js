@@ -1,5 +1,5 @@
 function accum(s) {
-  const result = "";
+  let result = "";
   for (let i = 0; i < s.length; i++) {
     result += s[i].toUpperCase();
     for (let j = 0; j < i; j++) {
