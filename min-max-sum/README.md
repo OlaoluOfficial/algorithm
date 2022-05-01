@@ -43,5 +43,3 @@ Sum everything except , the sum is .
 Sum everything except , the sum is .
 Sum everything except , the sum is .
 Hints: Beware of integer overflow! Use 64-bit Integer.
-
-Need help to get started? Try the Solve Me First problem
