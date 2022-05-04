@@ -18,5 +18,3 @@ function timeConversion(s) {
   }
   return militaryHour + s.substring(2,8)
 }
-
-console.log(timeConversion('12:01:00AM')) // '00:01:00'
